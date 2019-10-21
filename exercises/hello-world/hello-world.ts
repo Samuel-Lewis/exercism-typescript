@@ -1,7 +1,7 @@
 class HelloWorld {
-    static hello( /* Parameters go here */ ) {
-        // Your code here
-    }
+  static hello(name: string = 'World') {
+    return `Hello, ${name}!`;
+  }
 }
 
-export default HelloWorld
+export default HelloWorld;
