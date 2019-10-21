@@ -1,6 +1,6 @@
 {
   "name": "typescript",
-  "dockerFile": "../Dockerfile",
+  "image": "marionebl/typescript-exercism",
   "workspaceFolder": "/workspace/typescript",
   "extensions": [
     "dbaeumer.vscode-eslint",
