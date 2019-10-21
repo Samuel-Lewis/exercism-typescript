@@ -1,7 +1,9 @@
 class TwoFer {
-  public static twoFer( /* Parameters go here */ ): string {
-    // Your code here
+  public static twoFer(name: string = 'you'): string {
+    // return ['One for ', name, ', one for me'].join('');
+    // return 'One for ' + name + ', one for me';
+    return `One for ${name}, one for me.`;
   }
 }
 
-export default TwoFer
+export default TwoFer;
