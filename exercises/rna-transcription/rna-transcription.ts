@@ -1,41 +1,27 @@
 class Transcriptor {
+  mapBase(base: string): string | Error {
+    switch (base) {
+      case 'C':
+        return 'G';
+      case 'G':
+        return 'C';
+      case 'A':
+        return 'U';
+      case 'T':
+        return 'A';
+      default:
+        return new Error('Invalid input DNA.');
+    }
+  }
+
   toRna(dna: string): string {
-    // if (dna === '') {
-    //   return dna;
-    // }
-    // const firstChar = dna[0];
+    const base = dna.split('').map(this.mapBase);
+    const error = base.find((b): b is Error => b instanceof Error);
+    if (error) {
+      throw error;
+    }
 
-    // if (firstChar === 'C') {
-    //   return 'G' + this.toRna(dna.slice(1));
-    // }
-    // if (firstChar === 'G') {
-    //   return 'C' + this.toRna(dna.slice(1));
-    // }
-    // if (firstChar === 'A') {
-    //   return 'U' + this.toRna(dna.slice(1));
-    // }
-    // if (firstChar === 'T') {
-    //   return 'A' + this.toRna(dna.slice(1));
-    // }
-
-    return dna
-      .split('')
-      .map(d => {
-        if (d === 'C') {
-          return 'G';
-        }
-        if (d === 'G') {
-          return 'C';
-        }
-        if (d === 'A') {
-          return 'U';
-        }
-        if (d === 'T') {
-          return 'A';
-        }
-        throw new TypeError('not DNA');
-      })
-      .join('');
+    return base.join('');
   }
 }
 
