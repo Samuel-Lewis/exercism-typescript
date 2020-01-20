@@ -1,8 +1,6 @@
 class Matrix {
-  // public rows: number[][] = [];
-  // public columns: number[][] = [];
-
   private rowLength: number;
+  private colLength: number;
   private data: number[];
 
   constructor(private matrixString: string) {
@@ -15,10 +13,12 @@ class Matrix {
       .join(' ')
       .split(' ')
       .map(v => parseInt(v, 10));
+
+    this.colLength = this.data.length / this.rowLength;
   }
 
   public get rows(): number[][] {
-    return new Array(this.data.length / this.rowLength)
+    return new Array(this.colLength)
       .fill(true)
       .map((_, idx) =>
         this.data.slice(idx * this.rowLength, (idx + 1) * this.rowLength)
@@ -26,7 +26,13 @@ class Matrix {
   }
 
   public get columns(): number[][] {
-    return [];
+    return new Array(this.rowLength)
+      .fill(true)
+      .map((_, colIdx) =>
+        new Array(this.colLength)
+          .fill(true)
+          .map((_, rowIdx) => this.data[rowIdx * this.rowLength + colIdx])
+      );
   }
 }
 
