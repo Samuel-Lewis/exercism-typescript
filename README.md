@@ -41,7 +41,7 @@ There are some utility methods in the `Makefile` to help with development. The b
 - [x] [space-age](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/space-age)
 - [x] [pangram](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/pangram)
 - [x] [bob](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/bob)
-- [ ] [matrix](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/matrix)
+- [x] [matrix](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/matrix)
 - [ ] [robot-name](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/robot-name)
 - [ ] [grade-school](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/grade-school)
 - [ ] [clock](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/clock)
