@@ -1,4 +1,4 @@
-import { range } from './robot-name';
+import { range, genId } from './robot-name';
 
 describe('range', () => {
   it('[0, 10]', () => {
@@ -15,5 +15,18 @@ describe('range', () => {
 
   it('[10, 5]', () => {
     expect(range(10, 5)).toEqual([10, 9, 8, 7, 6, 5]);
+  });
+});
+
+describe('genId', () => {
+  it.each`
+    input     | output
+    ${0}      | ${'AA000'}
+    ${5}      | ${'AA005'}
+    ${1001}   | ${'AB001'}
+    ${456}    | ${'AA456'}
+    ${675999} | ${'ZZ999'}
+  `('genId($input) ➞ $output', ({ input, output }) => {
+    expect(genId(input)).toEqual(output);
   });
 });

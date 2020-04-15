@@ -42,7 +42,7 @@ There are some utility methods in the `Makefile` to help with development. The b
 - [x] [pangram](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/pangram)
 - [x] [bob](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/bob)
 - [x] [matrix](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/matrix)
-- [ ] [robot-name](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/robot-name)
+- [x] [robot-name](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/robot-name)
 - [ ] [grade-school](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/grade-school)
 - [ ] [clock](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/clock)
 - [ ] [secret-handshake](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/secret-handshake)
