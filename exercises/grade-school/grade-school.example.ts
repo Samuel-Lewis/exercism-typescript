@@ -1,4 +1,4 @@
-export default class GradeSchool {
+export default class GradeSchool { 
   private roster = new Map<number, Set<string>>()
 
   public addStudent(name: string, grade: number): void {

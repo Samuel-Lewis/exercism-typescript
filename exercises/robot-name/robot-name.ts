@@ -1,3 +1,8 @@
+/**
+ * This exercise uses two different approaches to solve the same problem.
+ * Approach 1 is using a function generator to calculate the corresponding uuid
+ * Approach 2 pregenerates all uuids but focuses on types and HOFs
+ */
 const alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 export const genId = (n: number): string => {
