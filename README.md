@@ -45,7 +45,7 @@ There are some utility methods in the `Makefile` to help with development. The b
 - [x] [robot-name](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/robot-name)
 - [x] [grade-school](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/grade-school)
 - [x] [clock](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/clock)
-- [ ] [secret-handshake](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/secret-handshake)
+- [x] [secret-handshake](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/secret-handshake)
 - [ ] [binary-search](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/binary-search)
 - [ ] [linked-list](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/linked-list)
 - [ ] [rational-numbers](https://github.com/Samuel-Lewis/typescript/tree/master/exercises/rational-numbers)

@@ -1,7 +1,7 @@
 # Secret Handshake
 
 > There are 10 types of people in the world: Those who understand
-> binary, and those who don't.
+> binary, and those who don't, and those who didn't expect this joke to be in ternary.
 
 You and your fellow cohort of those in the "know" when it comes to
 binary decide to come up with a secret "handshake".
