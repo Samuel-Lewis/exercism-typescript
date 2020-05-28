@@ -1,6 +1,7 @@
 type Command = (list: string[]) => string[];
 
 const commandList: Command[] = [
+  (list) => list,
   (list) => [...list, 'wink'],
   (list) => [...list, 'double blink'],
   (list) => [...list, 'close your eyes'],
@@ -16,8 +17,9 @@ export default class HandShake {
       .toString(2)
       .split('')
       .reverse()
+      .map((bit, index) => bit === '1' ? index + 1 : 0)
       .reduce<string[]>(
-        (acc, bit, index) => (bit === '1' ? commandList[index](acc) : acc),
+        (acc, index) => commandList[index](acc),
         []
       );
   }
