@@ -49,7 +49,7 @@ There are some utility methods in the `Makefile` to help with development. The b
 - [ ] [binary-search](./exercises/binary-search)
 - [ ] [linked-list](./exercises/linked-list)
 - [ ] [rational-numbers](./exercises/rational-numbers)
-- [ ] [atbash-cipher](./exercises/atbash-cipher)
+- [x] [atbash-cipher](./exercises/atbash-cipher)
 - [ ] [simple-cipher](./exercises/simple-cipher)
 - [ ] [wordy](./exercises/wordy)
 - [ ] [list-ops](./exercises/list-ops)
