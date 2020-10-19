@@ -50,7 +50,7 @@ There are some utility methods in the `Makefile` to help with development. The b
 - [ ] [linked-list](./exercises/linked-list)
 - [ ] [rational-numbers](./exercises/rational-numbers)
 - [x] [atbash-cipher](./exercises/atbash-cipher)
-- [ ] [simple-cipher](./exercises/simple-cipher)
+- [x] [simple-cipher](./exercises/simple-cipher)
 - [ ] [wordy](./exercises/wordy)
 - [ ] [list-ops](./exercises/list-ops)
 - [ ] [word-count](./exercises/word-count)
