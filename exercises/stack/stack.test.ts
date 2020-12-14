@@ -6,21 +6,22 @@ describe('Stack', () => {
     expect(stack.pop()).toBeUndefined();
   });
 
-  xit('stack pop returns last item', () => {
+  it('stack pop returns last item', () => {
     const stack = new Stack<number>();
     stack.push(100);
     expect(stack.pop()).toBe(100);
   });
 
-  xit('add/extract elements to the end of the stack with push/pop', () => {
+  it('add/extract elements to the end of the stack with push/pop', () => {
     const stack = new Stack<number>();
     stack.push(10);
     stack.push(20);
+    // 20 -> 10
     expect(stack.pop()).toBe(20);
     expect(stack.pop()).toBe(10);
   });
 
-  xit('example', () => {
+  it('example', () => {
     const stack = new Stack<number>();
     stack.push(10);
     stack.push(20);
