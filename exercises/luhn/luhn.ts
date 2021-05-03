@@ -1,35 +1,31 @@
 const Luhn = {
   valid(s: string) {
-    if (s.length <= 1) {
+    const numberArray = s
+      .split("")
+      .filter((digit) => digit !== " ")
+      .reverse()
+      .map(Number);
+
+    const hasNaN = numberArray.filter((digit) => digit === NaN).length > 0;
+    // const hasNaN2 = numberArray.some((digit) => Number.isNaN(digit));
+
+    if (hasNaN || numberArray.length <= 1) {
       return false;
     }
-    // const doubled = [];
-    // for (let i = s.length - 1; i >= 0; i--) {
-    //   let digit = parseInt(s[i]);
-    //   if (i % 2 === 0) {
-    //     digit *= 2;
-    //   }
-    //   doubled.push(digit);
-    // }
 
-    return (
-      s
-        .split("")
-        .reverse()
-        .map(Number)
-        .map((digit, index) => {
-          if (index % 2 === 1) {
-            return (digit *= 2);
-          }
-          return digit;
-        })
-        .map((digit) => {
-          return digit > 9 ? digit - 9 : digit;
-        })
-        .reduce((accum, curr) => (accum += curr)) %
-        10 ===
-      0
-    );
+    const check = numberArray
+      .map((digit, index) => {
+        if (index % 2 === 1) {
+          return (digit *= 2);
+        }
+        return digit;
+      })
+      .map((digit) => {
+        return digit > 9 ? digit - 9 : digit;
+      })
+      .reduce((accum, curr) => (accum += curr));
+
+    return check % 10 === 0;
   },
 };
 
