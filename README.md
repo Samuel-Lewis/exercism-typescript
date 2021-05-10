@@ -68,7 +68,7 @@ There are some utility methods in the `Makefile` to help with development. The b
 - [ ] [allergies](./exercises/allergies)
 - [ ] [perfect-numbers](./exercises/perfect-numbers)
 - [ ] [complex-numbers](./exercises/complex-numbers)
-- [ ] [luhn](./exercises/luhn)
+- [x] [luhn](./exercises/luhn)
 - [ ] [grains](./exercises/grains)
 - [ ] [pythagorean-triplet](./exercises/pythagorean-triplet)
 - [ ] [sum-of-multiples](./exercises/sum-of-multiples)

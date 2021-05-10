@@ -1,57 +1,57 @@
-import OcrParser from "./ocr-numbers"
+import OcrParser from "./ocr-numbers";
 
 describe("ocr", () => {
   it("recognizes zero", () => {
-    expect(OcrParser.convert(" _ \n" + "| |\n" + "|_|\n" + "   ")).toBe("0")
-  })
+    expect(OcrParser.convert(" _ \n" + "| |\n" + "|_|\n" + "   ")).toBe("0");
+  });
 
-  xit("recognizes one", () => {
-    expect(OcrParser.convert("   \n" + "  |\n" + "  |\n" + "   ")).toBe("1")
-  })
+  it("recognizes one", () => {
+    expect(OcrParser.convert("   \n" + "  |\n" + "  |\n" + "   ")).toBe("1");
+  });
 
-  xit("recognizes two", () => {
-    expect(OcrParser.convert(" _ \n" + " _|\n" + "|_ \n" + "   ")).toBe("2")
-  })
+  it("recognizes two", () => {
+    expect(OcrParser.convert(" _ \n" + " _|\n" + "|_ \n" + "   ")).toBe("2");
+  });
 
-  xit("recognizes three", () => {
-    expect(OcrParser.convert(" _ \n" + " _|\n" + " _|\n" + "   ")).toBe("3")
-  })
+  it("recognizes three", () => {
+    expect(OcrParser.convert(" _ \n" + " _|\n" + " _|\n" + "   ")).toBe("3");
+  });
 
-  xit("recognizes four", () => {
-    expect(OcrParser.convert("   \n" + "|_|\n" + "  |\n" + "   ")).toBe("4")
-  })
+  it("recognizes four", () => {
+    expect(OcrParser.convert("   \n" + "|_|\n" + "  |\n" + "   ")).toBe("4");
+  });
 
-  xit("recognizes five", () => {
-    expect(OcrParser.convert(" _ \n" + "|_ \n" + " _|\n" + "   ")).toBe("5")
-  })
+  it("recognizes five", () => {
+    expect(OcrParser.convert(" _ \n" + "|_ \n" + " _|\n" + "   ")).toBe("5");
+  });
 
-  xit("recognizes six", () => {
-    expect(OcrParser.convert(" _ \n" + "|_ \n" + "|_|\n" + "   ")).toBe("6")
-  })
+  it("recognizes six", () => {
+    expect(OcrParser.convert(" _ \n" + "|_ \n" + "|_|\n" + "   ")).toBe("6");
+  });
 
-  xit("recognizes seven", () => {
-    expect(OcrParser.convert(" _ \n" + "  |\n" + "  |\n" + "   ")).toBe("7")
-  })
+  it("recognizes seven", () => {
+    expect(OcrParser.convert(" _ \n" + "  |\n" + "  |\n" + "   ")).toBe("7");
+  });
 
-  xit("recognizes eight", () => {
-    expect(OcrParser.convert(" _ \n" + "|_|\n" + "|_|\n" + "   ")).toBe("8")
-  })
+  it("recognizes eight", () => {
+    expect(OcrParser.convert(" _ \n" + "|_|\n" + "|_|\n" + "   ")).toBe("8");
+  });
 
-  xit("recognizes nine", () => {
-    expect(OcrParser.convert(" _ \n" + "|_|\n" + " _|\n" + "   ")).toBe("9")
-  })
+  it("recognizes nine", () => {
+    expect(OcrParser.convert(" _ \n" + "|_|\n" + " _|\n" + "   ")).toBe("9");
+  });
 
-  xit("recognizes ten", () => {
+  it("recognizes ten", () => {
     expect(
       OcrParser.convert("    _ \n" + "  || |\n" + "  ||_|\n" + "      ")
-    ).toBe("10")
-  })
+    ).toBe("10");
+  });
 
-  xit("identifies garble", () => {
-    expect(OcrParser.convert("   \n" + "| |\n" + "| |\n" + "   ")).toBe("?")
-  })
+  it("identifies garble", () => {
+    expect(OcrParser.convert("   \n" + "| |\n" + "| |\n" + "   ")).toBe("?");
+  });
 
-  xit("converts 110101100", () => {
+  it("converts 110101100", () => {
     expect(
       OcrParser.convert(
         "       _     _        _  _ \n" +
@@ -59,10 +59,10 @@ describe("ocr", () => {
           "  |  ||_|  ||_|  |  ||_||_|\n" +
           "                           "
       )
-    ).toBe("110101100")
-  })
+    ).toBe("110101100");
+  });
 
-  xit("identifies garble mixed in", () => {
+  it("identifies garble mixed in", () => {
     expect(
       OcrParser.convert(
         "       _     _           _ \n" +
@@ -70,10 +70,10 @@ describe("ocr", () => {
           "  |  | _|  ||_|  |  ||_||_|\n" +
           "                           "
       )
-    ).toBe("11?10?1?0")
-  })
+    ).toBe("11?10?1?0");
+  });
 
-  xit("converts 1234567890", () => {
+  it("converts 1234567890", () => {
     expect(
       OcrParser.convert(
         "    _  _     _  _  _  _  _  _ \n" +
@@ -81,13 +81,13 @@ describe("ocr", () => {
           "  ||_  _|  | _||_|  ||_| _||_|\n" +
           "                              "
       )
-    ).toBe("1234567890")
-  })
+    ).toBe("1234567890");
+  });
 
   xit("converts 123 456 789", () => {
     expect(
       OcrParser.convert(
-        "    _  _ \n" +
+          "    _  _ \n" +
           "  | _| _|\n" +
           "  ||_  _|\n" +
           "         \n" +
@@ -100,6 +100,6 @@ describe("ocr", () => {
           "  ||_| _|\n" +
           "         "
       )
-    ).toBe("123,456,789")
-  })
-})
+    ).toBe("123,456,789");
+  });
+});
