@@ -93,7 +93,7 @@ There are some utility methods in the `Makefile` to help with development. The b
 - [ ] [saddle-points](./exercises/saddle-points)
 - [ ] [spiral-matrix](./exercises/spiral-matrix)
 - [ ] [transpose](./exercises/transpose)
-- [ ] [ocr-numbers](./exercises/ocr-numbers)
+- [x] [ocr-numbers](./exercises/ocr-numbers)
 - [ ] [nth-prime](./exercises/nth-prime)
 - [ ] [alphametics](./exercises/alphametics)
 - [ ] [connect](./exercises/connect)
