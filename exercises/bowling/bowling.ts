@@ -1,3 +1,5 @@
+// https://www.myactivesg.com/Sports/Bowling/How-To-Play/Bowling-Rules/How-are-points-determined-in-bowling
+
 enum FrameType {
   STRIKE,
   SPARE,
@@ -27,7 +29,7 @@ export default class Bowling {
   }
 
   public score(): number {
-    this.frames = this.rolls.reduce((acc, curr) => {
+    this.frames = this.rolls.reduce((acc, curr, index) => {
       const lastFrame = acc.pop();
       if (!lastFrame || lastFrame.length === 0) {
         acc.push([curr]);
@@ -35,18 +37,45 @@ export default class Bowling {
       }
 
       const lastRoll = lastFrame[0];
-      if (lastRoll === 10) {
-        acc.push([curr]);
-        return acc;
-      }
+      // if (lastRoll === 10) {
+      //   acc.push([lastRoll]);
+      //   return acc;
+      // }
 
       const newLastFrame = [lastRoll, curr];
       acc.push(newLastFrame);
-      acc.push([]);
+      if (index < this.rolls.length - 1) {
+        // Add empty array to mark the end of a frame
+        acc.push([]);
+      }
       return acc;
     }, [] as number[][]);
 
+    console.log(this.frames);
+
+    // Sum up the scores naively
     this.rolls.forEach((r) => this.roll(r));
+
+    this.frames.forEach((frame, index) => {
+      // console.log(frame);
+      switch (this.frameType(frame)) {
+        case FrameType.OPEN:
+          console.log('OPEN');
+          break;
+        case FrameType.SPARE:
+          console.log('SPARE');
+          // Bonus points don't apply to fill balls
+          if (index < 9) {
+            let nextRoll = this.frames[index + 1][0];
+            console.log({ nextRoll });
+            this.runningScore += nextRoll;
+          }
+          break;
+        case FrameType.STRIKE:
+          console.log('STRIKE');
+      }
+    });
+
     return this.runningScore;
   }
 }
