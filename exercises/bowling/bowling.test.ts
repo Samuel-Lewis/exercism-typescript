@@ -49,17 +49,17 @@ describe('Bowling', () => {
       expect(new Bowling(rolls).score()).toEqual(10);
     });
 
-    xit('points scored in the two rolls after a strike are counted twice as a bonus', () => {
+    it('points scored in the two rolls after a strike are counted twice as a bonus', () => {
       const rolls = [10, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       expect(new Bowling(rolls).score()).toEqual(26);
     });
 
-    xit('should be able to score multiple strikes in a row', () => {
+    it('should be able to score multiple strikes in a row', () => {
       const rolls = [10, 10, 10, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       expect(new Bowling(rolls).score()).toEqual(81);
     });
 
-    xit('should allow fill balls when the last frame is a strike', () => {
+    it('should allow fill balls when the last frame is a strike', () => {
       const rolls = [
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 1,
       ];
